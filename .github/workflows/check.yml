@@ -1,0 +1,50 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax-and-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: 安装 pnpm
+        run: npm install -g pnpm@9
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 语法检查（src / server）
+        run: |
+          set -e
+          for f in src/*.mjs server/*.mjs; do
+            node --check "$f"
+          done
+          echo "语法检查通过"
+
+      - name: 人设 JSON 校验
+        run: |
+          set -e
+          for f in personas/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('ok $f')"
+          done
+
+      - name: 场景配置校验
+        run: node scripts/scene2-preview.mjs
+
+      - name: 冒烟测试
+        run: node scripts/smoke.mjs
+
+      - name: 场景层单测
+        run: node scripts/test-scene-v2.mjs
+
+      - name: 用户情绪模型单测
+        run: node scripts/test-uaffect.mjs
