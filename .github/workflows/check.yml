@@ -11,16 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'pnpm'
 
-      - name: 安装 pnpm
-        run: npm install -g pnpm@9
-
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: 语法检查（src / server）
         run: |
@@ -34,7 +36,7 @@ jobs:
         run: |
           set -e
           for f in personas/*.json; do
-            node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('ok $f')"
+            node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8')); console.log('ok', process.argv[1])" "$f"
           done
 
       - name: 场景配置校验
