@@ -38,3 +38,13 @@ Thumbs.db
 desktop.ini
 
 dist/
+# 开源仓库额外忽略
+dist/
+test/runs/
+tools/
+backup/
+*.db
+*.db-wal
+*.db-shm
+.DS_Store
+Thumbs.db
