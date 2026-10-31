@@ -51,8 +51,8 @@ function run(n, sig, prev = null) {
 console.log('\n语气 → 状态');
 
 {
-  const happy = compute(null, { tone: { label: '开心', intensity: 0.8 }, msgLen: 12, now: 1 });
-  const angry = compute(null, { tone: { label: '生气', intensity: 0.8 }, msgLen: 12, now: 1 });
+  const happy = compute(null, { tone: { label: '开心', intensity: 0.8 }, msgLen: 12, hour: 12, now: 1 });
+  const angry = compute(null, { tone: { label: '生气', intensity: 0.8 }, msgLen: 12, hour: 12, now: 1 });
   ok('开心 0.8：v 明显为正', happy.v > 0.2, `v=${happy.v}`);
   ok('开心 0.8：激活度上升', happy.a > 0.4, `a=${happy.a}`);
   ok('生气 0.8：v 明显为负', angry.v < -0.2, `v=${angry.v}`);
@@ -70,7 +70,7 @@ console.log('\n置信度边界');
   ok('初值置信度不足，不做动作', blind.blind === true && blind.empathy === 0 && blind.caution === 0);
   ok('初值仍然允许主动', blind.allowProactive === true);
 
-  const one = compute(null, { tone: { label: '生气', intensity: 0.9 }, msgLen: 10, now: 1 });
+  const one = compute(null, { tone: { label: '生气', intensity: 0.9 }, msgLen: 10, hour: 12, now: 1 });
   ok('只看一条不共情（证据不够）', judge(one).blind === true && judge(one).empathy === 0, `conf=${one.confidence}`);
 
   const two = run(2, { tone: { label: '生气', intensity: 0.9 }, msgLen: 10 });
