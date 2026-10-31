@@ -48,13 +48,16 @@ jobs:
       - name: 场景层单测
         run: node scripts/test-scene-v2.mjs
 
-      - name: 用户情绪模型单测（失败时把 ✗ 行标成注解，方便查）
+      - name: 用户情绪模型单测
+        shell: bash
         run: |
-          set -o pipefail
-          node scripts/test-uaffect.mjs 2>&1 | tee uaffect.log
-      - name: 打印失败断言
-        if: failure()
-        run: |
-          echo "## 失败的断言" >> \
-          grep '✗' uaffect.log >> \ || echo "（没抓到 ✗ 行）" >> \
-          grep '✗' uaffect.log | while read -r l; do echo "::error::\"; done || true
+          set +e
+          node scripts/test-uaffect.mjs > uaffect.log 2>&1
+          code=$?
+          cat uaffect.log
+          if [ $code -ne 0 ]; then
+            head -30 uaffect.log | while IFS= read -r line; do
+              echo "::error title=uaffect::$line"
+            done
+          fi
+          exit $code
