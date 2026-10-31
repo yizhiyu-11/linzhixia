@@ -1,0 +1,51 @@
+{
+  "updated": "2026-10-28",
+  "note": "实测过的 QQ ↔ 中间件 组合。只用于提示和推荐，不自动改 QQ。",
+  "pairs": [
+    {
+      "qqRange": "9.9.20-9.9.29",
+      "tool": "napcat",
+      "toolName": "NapCat",
+      "toolVersion": "4.18.x",
+      "target": "9.9.22-40990",
+      "works": true,
+      "note": "旧组合：QQ 9.9.22~9.9.23 + NapCat 4.18.x 可用"
+    },
+    {
+      "qqRange": "9.9.30-9.9.39",
+      "tool": "napcat",
+      "toolName": "NapCat",
+      "toolVersion": "4.18.x",
+      "target": "9.9.22-40990",
+      "works": false,
+      "note": "QQ 9.9.36 + NapCat 4.18.41：注入失败，QQ 起来就退"
+    },
+    {
+      "qqRange": "9.9.30-9.9.39",
+      "tool": "snowluma",
+      "toolName": "SnowLuma",
+      "toolVersion": "2.2.x",
+      "target": "",
+      "works": true,
+      "note": "QQ 9.9.36 + SnowLuma 2.2.0 实测可用"
+    }
+  ],
+  "downloads": {
+    "napcat": {
+      "url": "https://gh-proxy.com/https://github.com/NapNeko/NapCatQQ/releases/download/v4.18.41/NapCat.Shell.zip",
+      "official": "https://github.com/NapNeko/NapCatQQ/releases",
+      "sizeMB": 34,
+      "zipName": "NapCat.Shell.zip",
+      "license": "禁止商用（Limited Redistribution License）。仅在你已获得授权或自用时使用。",
+      "entries": ["NapCatWinBootMain.exe", "napcat.mjs"]
+    },
+    "snowluma": {
+      "url": "https://gh-proxy.com/https://github.com/SnowLuma/SnowLuma/releases/download/v2.2.0/SnowLuma-v2.2.0-win-x64-lite.zip",
+      "official": "https://github.com/SnowLuma/SnowLuma/releases",
+      "sizeMB": 6.5,
+      "zipName": "SnowLuma-lite.zip",
+      "license": "源码可见但非商用；商业使用需作者书面授权。",
+      "entries": ["index.mjs"]
+    }
+  }
+}

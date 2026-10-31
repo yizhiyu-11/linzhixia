@@ -1,0 +1,24 @@
+{
+  "band": "afternoon",
+  "hours": [13, 18],
+  "scenes": [
+    { "id": "af_desk", "place": "work", "location": "公司", "doing": "在改稿，改到第四版", "pace": "busy", "chat": 0.2,
+      "items": [ { "text": "越改越乱", "kind": "work", "expectMin": 150 } ] },
+    { "id": "af_meeting_long", "place": "work", "location": "公司", "doing": "在开一个很长的会", "pace": "busy", "chat": 0.1,
+      "items": [ { "text": "已经开了一个半小时", "kind": "work", "expectMin": 90 } ] },
+    { "id": "af_reject", "place": "work", "location": "公司", "doing": "稿子被打回来，在重写", "pace": "busy", "chat": 0.3,
+      "items": [ { "text": "被退回来了，说方向不对", "kind": "work", "expectMin": 60,
+        "appraisal": { "relevance": 0.9, "goalCongruence": -0.8, "agency": "other", "selfImage": -0.6 } } ] },
+    { "id": "af_pass", "place": "work", "location": "公司", "doing": "稿子过了，在等反馈", "pace": "normal", "chat": 0.5,
+      "items": [ { "text": "总算过了", "kind": "work", "expectMin": 20,
+        "appraisal": { "relevance": 0.8, "goalCongruence": 0.7, "agency": "self", "selfImage": 0.5 } } ] },
+    { "id": "af_coffee", "place": "outside", "location": "咖啡店", "doing": "在楼下买咖啡，顺便透口气", "pace": "normal", "chat": 0.6,
+      "items": [ { "text": "排了会儿队", "kind": "meal", "expectMin": 15 } ] },
+    { "id": "af_plants", "place": "home", "location": "家", "doing": "在阳台给多肉浇水", "pace": "quiet", "chat": 0.6,
+      "items": [ { "text": "有一盆叶子发黄", "kind": "chore", "expectMin": 20, "carry": true } ] },
+    { "id": "af_errand", "place": "outside", "location": "银行", "doing": "在排队办业务", "pace": "busy", "chat": 0.4,
+      "items": [ { "text": "前面还有六个人", "kind": "leisure", "expectMin": 40 } ] },
+    { "id": "af_walk", "place": "outside", "location": "路上", "doing": "在外面走，风有点大", "pace": "normal", "chat": 0.6,
+      "items": [ { "text": "头发被吹乱了", "kind": "commute", "expectMin": 20 } ] }
+  ]
+}

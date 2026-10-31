@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "note": "场景层结构定义：只写规则，不写具体内容。内容在 scenes/*.json，作息在 presets/*.json。",
+  "bands": {
+    "morning": { "label": "早间", "chat": 0.5, "pace": "busy" },
+    "forenoon": { "label": "上午", "chat": 0.2, "pace": "busy" },
+    "noon": { "label": "午间", "chat": 0.8, "pace": "normal" },
+    "afternoon": { "label": "下午", "chat": 0.2, "pace": "busy" },
+    "evening": { "label": "晚间", "chat": 0.7, "pace": "normal" },
+    "night": { "label": "夜间", "chat": 0.9, "pace": "quiet" }
+  },
+  "itemRules": {
+    "chore": { "expectMin": [5, 180], "carry": true, "doneKeepMin": 120 },
+    "work": { "expectMin": [10, 240], "carry": false, "doneKeepMin": 60 },
+    "meal": { "expectMin": [5, 40], "carry": false, "doneKeepMin": 60 },
+    "commute": { "expectMin": [5, 60], "carry": false, "doneKeepMin": 30 },
+    "leisure": { "expectMin": [5, 90], "carry": false, "doneKeepMin": 60 }
+  },
+  "seedsRule": {
+    "max": 3,
+    "order": ["done", "doing", "pending"],
+    "minChar": 4
+  },
+  "refresh": {
+    "minMin": 25,
+    "maxMin": 90,
+    "doneSwapChance": 0.6
+  },
+  "appraisal": {
+    "note": "事件评价：由场景事项带，交给情绪层换算，不在这里存情绪值",
+    "fields": {
+      "relevance": "0-1 这事跟我有关吗",
+      "goalCongruence": "-1-1 对我好还是坏",
+      "agency": "self|other|circumstance 谁的锅",
+      "selfImage": "-1-1 伤不伤自尊"
+    }
+  }
+}

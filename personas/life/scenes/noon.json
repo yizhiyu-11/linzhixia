@@ -1,0 +1,22 @@
+{
+  "band": "noon",
+  "hours": [12, 13],
+  "scenes": [
+    { "id": "no_takeaway", "place": "work", "location": "公司", "doing": "在等外卖", "pace": "normal", "chat": 0.8,
+      "items": [ { "text": "骑手在楼下绕圈", "kind": "meal", "expectMin": 15 } ] },
+    { "id": "no_desk_eat", "place": "work", "location": "公司", "doing": "边吃边看文档", "pace": "normal", "chat": 0.8,
+      "items": [ { "text": "酱汁洒桌上了", "kind": "meal", "expectMin": 20 } ] },
+    { "id": "no_canteen", "place": "work", "location": "楼下食堂", "doing": "端着盘子在找位子", "pace": "busy", "chat": 0.6,
+      "items": [ { "text": "人太多，挤不进去", "kind": "meal", "expectMin": 20 } ] },
+    { "id": "no_convenience", "place": "shop", "location": "便利店", "doing": "在挑饭团", "pace": "normal", "chat": 0.8,
+      "items": [ { "text": "排了三个人", "kind": "meal", "expectMin": 10 } ] },
+    { "id": "no_colleague", "place": "outside", "location": "餐厅", "doing": "和同事拼桌", "pace": "busy", "chat": 0.4,
+      "items": [ { "text": "他们在聊八卦", "kind": "leisure", "expectMin": 40 } ] },
+    { "id": "no_home_noodle", "place": "home", "location": "家", "doing": "煮了面在等它软", "pace": "normal", "chat": 0.8,
+      "items": [ { "text": "盐放多了", "kind": "meal", "expectMin": 20 } ] },
+    { "id": "no_nap", "place": "work", "location": "公司", "doing": "趴在桌上眯一会儿", "pace": "quiet", "chat": 0.4,
+      "items": [ { "text": "只睡了十分钟", "kind": "leisure", "expectMin": 20 } ] },
+    { "id": "no_walk", "place": "outside", "location": "楼下", "doing": "在楼下走一圈，顺便晒会儿", "pace": "normal", "chat": 0.7,
+      "items": [ { "text": "太阳有点晃眼", "kind": "leisure", "expectMin": 15 } ] }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "band": "evening",
+  "hours": [18, 21.5],
+  "scenes": [
+    {
+      "id": "ev_commute_home",
+      "place": "commute",
+      "location": "地铁",
+      "doing": "在通勤回家，被挤在门口",
+      "pace": "busy",
+      "chat": 0.6,
+      "items": [
+        { "text": "还有三站", "kind": "commute", "expectMin": 25 },
+        { "text": "鞋被踩了一脚", "kind": "commute", "expectMin": 5 }
+      ]
+    },
+    {
+      "id": "ev_grocery",
+      "place": "shop",
+      "location": "超市",
+      "doing": "在挑西红柿，捏了半天",
+      "pace": "normal",
+      "chat": 0.7,
+      "items": [
+        { "text": "忘了带袋子", "kind": "chore", "expectMin": 10, "carry": true },
+        { "text": "西红柿太软了", "kind": "chore", "expectMin": 8 }
+      ]
+    },
+    {
+      "id": "ev_cook_noodle",
+      "place": "home",
+      "location": "家",
+      "doing": "在厨房煮面，等水开",
+      "pace": "normal",
+      "chat": 0.7,
+      "items": [
+        { "text": "锅里的水快开了", "kind": "meal", "expectMin": 20 },
+        { "text": "碗还没洗", "kind": "chore", "expectMin": 90, "carry": true }
+      ]
+    },
+    {
+      "id": "ev_laundry_start",
+      "place": "home",
+      "location": "家",
+      "doing": "在把衣服扔进洗衣机",
+      "pace": "normal",
+      "chat": 0.6,
+      "items": [
+        { "text": "衣服泡在盆里，还没洗", "kind": "chore", "expectMin": 150, "carry": true }
+      ]
+    },
+    {
+      "id": "ev_work_overtime",
+      "place": "work",
+      "location": "公司",
+      "doing": "还在改第三版，办公室只剩两个人",
+      "pace": "busy",
+      "chat": 0.5,
+      "items": [
+        { "text": "一版等着发出去", "kind": "work", "expectMin": 120 },
+        {
+          "text": "被叫去办公室说了两句",
+          "kind": "work",
+          "expectMin": 15,
+          "appraisal": { "relevance": 0.9, "goalCongruence": -0.7, "agency": "other", "selfImage": -0.5 }
+        }
+      ]
+    },
+    {
+      "id": "ev_walk_home",
+      "place": "outside",
+      "location": "路上",
+      "doing": "在走回家，风有点大",
+      "pace": "normal",
+      "chat": 0.7,
+      "items": [
+        { "text": "头发被吹乱了", "kind": "commute", "expectMin": 20 },
+        { "text": "路灯下有人在遛狗", "kind": "leisure", "expectMin": 10 }
+      ]
+    },
+    {
+      "id": "ev_takeaway",
+      "place": "home",
+      "location": "家",
+      "doing": "在等外卖，坐在门口刷手机",
+      "pace": "normal",
+      "chat": 0.8,
+      "items": [
+        { "text": "骑手还有十分钟", "kind": "meal", "expectMin": 10 },
+        { "text": "昨天那份有点咸", "kind": "meal", "expectMin": 5 }
+      ]
+    },
+    {
+      "id": "ev_friend_call",
+      "place": "home",
+      "location": "家",
+      "doing": "在跟朋友打电话，边走来走去",
+      "pace": "busy",
+      "chat": 0.4,
+      "items": [
+        { "text": "朋友在讲她男朋友的事", "kind": "leisure", "expectMin": 40 }
+      ]
+    },
+    {
+      "id": "ev_balcony_plants",
+      "place": "home",
+      "location": "家",
+      "doing": "在阳台给多肉浇水",
+      "pace": "quiet",
+      "chat": 0.6,
+      "items": [
+        { "text": "有一盆叶子发黄了", "kind": "chore", "expectMin": 20, "carry": true }
+      ]
+    },
+    {
+      "id": "ev_nap_tired",
+      "place": "bed",
+      "location": "床上",
+      "doing": "躺着但睡不着，眼睛发酸",
+      "pace": "quiet",
+      "chat": 0.7,
+      "items": [
+        { "text": "今天走了快一万步", "kind": "leisure", "expectMin": 30 },
+        { "text": "明天要早起", "kind": "work", "expectMin": 10 }
+      ]
+    }
+  ]
+}

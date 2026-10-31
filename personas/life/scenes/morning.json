@@ -1,0 +1,22 @@
+{
+  "band": "morning",
+  "hours": [7.2, 9],
+  "scenes": [
+    { "id": "mo_wake", "place": "home", "location": "家", "doing": "刚起床，头发乱着", "pace": "busy", "chat": 0.5,
+      "items": [ { "text": "袜子配不成对", "kind": "chore", "expectMin": 10, "carry": true } ] },
+    { "id": "mo_mirror", "place": "home", "location": "家", "doing": "在镜子里看自己黑眼圈", "pace": "quiet", "chat": 0.5,
+      "items": [ { "text": "昨晚又睡晚了", "kind": "leisure", "expectMin": 10 } ] },
+    { "id": "mo_coffee", "place": "home", "location": "家", "doing": "在煮咖啡，等它滴完", "pace": "normal", "chat": 0.5,
+      "items": [ { "text": "牛奶快过期了", "kind": "chore", "expectMin": 10, "carry": true } ] },
+    { "id": "mo_egg", "place": "home", "location": "家", "doing": "在煎蛋，油溅出来", "pace": "normal", "chat": 0.5,
+      "items": [ { "text": "锅还没洗", "kind": "chore", "expectMin": 40, "carry": true } ] },
+    { "id": "mo_to_subway", "place": "commute", "location": "路上", "doing": "在去地铁站", "pace": "busy", "chat": 0.6,
+      "items": [ { "text": "还有五分钟", "kind": "commute", "expectMin": 10 } ] },
+    { "id": "mo_subway", "place": "commute", "location": "地铁", "doing": "被挤在门口", "pace": "busy", "chat": 0.6,
+      "items": [ { "text": "快到站了", "kind": "commute", "expectMin": 25 } ] },
+    { "id": "mo_breakfast_shop", "place": "outside", "location": "楼下早餐店", "doing": "在等豆浆", "pace": "busy", "chat": 0.6,
+      "items": [ { "text": "老板手忙脚乱", "kind": "meal", "expectMin": 10 } ] },
+    { "id": "mo_desk", "place": "work", "location": "公司", "doing": "刚到工位，电脑还没开", "pace": "busy", "chat": 0.3,
+      "items": [ { "text": "一堆未读消息", "kind": "work", "expectMin": 30 } ] }
+  ]
+}

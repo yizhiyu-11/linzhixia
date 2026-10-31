@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>林知夏 · 操作说明</title>
+<style>
+  :root { --ink:#1f2430; --sub:#6b7280; --line:#e5e9f2; --acc:#3b6ef6; --bg:#f7f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font: 15px/1.75 "Microsoft YaHei UI","Segoe UI",system-ui,sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 48px 28px 96px; }
+  header { border-bottom: 2px solid var(--acc); padding-bottom: 18px; margin-bottom: 28px; }
+  header h1 { margin: 0 0 6px; font-size: 30px; letter-spacing: .5px; }
+  header p { margin: 0; color: var(--sub); font-size: 13px; }
+  nav { background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px 24px; margin-bottom:32px; }
+  nav b { display:block; font-size:13px; color:var(--sub); margin-bottom:8px; letter-spacing:1px; }
+  nav ul { margin:0; padding-left:20px; columns:2; column-gap:32px; }
+  nav li { margin:3px 0; }
+  nav a { color: var(--ink); text-decoration:none; }
+  nav a:hover { color: var(--acc); }
+  h2 { font-size:22px; margin:44px 0 12px; padding-top:10px; border-top:1px solid var(--line); }
+  h3 { font-size:17px; margin:26px 0 8px; color:#243; }
+  h4 { font-size:15px; margin:20px 0 6px; }
+  p { margin: 10px 0; }
+  ul,ol { margin: 10px 0 10px 4px; padding-left: 22px; }
+  li { margin: 4px 0; }
+  code { background:#eef2f9; color:#22409a; padding:1px 5px; border-radius:4px; font-size:13px;
+         font-family: Consolas,"Cascadia Mono",monospace; }
+  pre { background:#0f172a; color:#94e9ff; padding:16px 18px; border-radius:12px; overflow:auto;
+        font-size:13px; line-height:1.6; }
+  pre code { background:none; color:inherit; padding:0; }
+  table { border-collapse: collapse; width:100%; margin:14px 0; background:#fff;
+          border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px; }
+  th,td { border-bottom:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0f4fb; font-weight:600; white-space:nowrap; }
+  tr:last-child td { border-bottom:none; }
+  blockquote { margin:14px 0; padding:12px 16px; background:#fff7e6; border-left:4px solid #f0b429;
+               border-radius:0 8px 8px 0; color:#6b4d00; }
+  .callout { margin:20px 0; border-radius:12px; padding:16px 20px 14px; border:1px solid; }
+  .callout-title { font-weight:800; font-size:15px; margin-bottom:8px; letter-spacing:.3px; }
+  .callout-body { font-size:14px; line-height:1.8; }
+  .callout-danger { background:#fff1f0; border-color:#ffb3ad; color:#8a1c12; }
+  .callout-danger .callout-title { color:#c0392b; }
+  .callout-important { background:#fff8e6; border-color:#ffd591; color:#7a4f00; }
+  .callout-important .callout-title { color:#b26a00; }
+  .callout-tip { background:#eefaf1; border-color:#a8e6bd; color:#1a5c33; }
+  .callout-tip .callout-title { color:#1e7a44; }
+  .callout-note { background:#eef4ff; border-color:#b8cdfc; color:#1c3a7a; }
+  .callout-note .callout-title { color:#2a55b8; }
+  hr { border:none; border-top:1px dashed var(--line); margin:28px 0; }
+  a { color: var(--acc); }
+  strong { font-weight: 700; }
+  footer { margin-top:56px; padding-top:18px; border-top:1px solid var(--line); color:var(--sub); font-size:13px; }
+  @media print { nav { display:none; } body { background:#fff; } .wrap { padding:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>林知夏 AI 角色对话系统</h1>
+    <p>操作说明 · v1.0 本地版（接 QQ） · 适用 Windows 10 / 11</p>
+  </header>
+  <nav>
+    <b>目录</b>
+    <ul><li><a href="#h-0">开始前必看（30 秒）</a></li>
+<li><a href="#h-1">零基础操作指南</a></li>
+<li><a href="#h-2">这是什么</a></li>
+<li><a href="#h-3">系统要求</a></li>
+<li><a href="#h-4">安装前准备</a></li>
+<li><a href="#h-5">安装</a></li>
+<li><a href="#h-6">首次启动与验证</a></li>
+<li><a href="#h-7">接入 QQ（重点）</a></li>
+<li><a href="#h-8">日常使用</a></li>
+<li><a href="#h-9">数据与备份</a></li>
+<li><a href="#h-10">故障排查</a></li>
+<li><a href="#h-11">诊断与求助</a></li>
+<li><a href="#h-12">费用与额度</a></li>
+<li><a href="#h-13">安全与合规</a></li>
+<li><a href="#h-14">卸载与重装</a></li>
+<li><a href="#h-15">附录</a></li></ul>
+  </nav>
+  <main>
+<h2 id="h-0">开始前必看（30 秒）</h2>
+<div class="callout callout-danger"><div class="callout-title">三件事不做，后面全是麻烦</div><div class="callout-body"><strong>① 关掉 QQ 自动更新</strong> —— 不关的话，腾讯一升级，中间件立刻失效，你会以为程序坏了。<br><strong>② 改 QQ 版本之前，先备份 Tencent Files</strong> —— QQ NT 数据库升级后不保证能降回去。<br><strong>③ 每个月复制一次 app\data</strong> —— 里面有她的记忆，程序可以重装，记忆重装不回来。</div></div>
+<div class="callout callout-important"><div class="callout-title">用什么号</div><div class="callout-body">建议<strong>专门注册一个机器人号</strong>，不要拿主号试。第三方接入有平台风险，这条不是危言耸听。</div></div>
+<div class="callout callout-tip"><div class="callout-title">只想先试试？</div><div class="callout-body">不接 QQ 也能用：装完双击「打开聊天」，在浏览器里和她聊。QQ 那部分随时可以补。</div></div>
+<hr>
+<h2 id="h-1">零基础操作指南</h2>
+<p>这一节给"完全没折腾过软件"的人。已经会解压、会装软件的可以跳过。</p>
+<h3 id="h-2">① 怎么解压</h3>
+<p>收到的是一个 <code>.zip</code> 压缩包：</p>
+<ul>
+<li><strong>Win11</strong>：右键压缩包 →「全部解压缩」→ 选择位置 → 解压</li>
+<li><strong>Win10</strong>：右键 →「提取全部」→ 选择位置 → 提取</li>
+<li>没有这两个选项？双击压缩包，资源管理器里点上方「解压 / 提取」</li>
+</ul>
+<p>解压后应该看到一个文件夹，里面有 <code>一键安装.cmd</code>。<strong>不要直接在压缩包里双击运行</strong>，会报错。</p>
+<h3 id="h-2">② 放到哪</h3>
+<pre><code>
+好：D:\林知夏          （盘符根目录 + 简单名字）
+好：D:\软件\林知夏     （中文可以，别太长）
+别：桌面              （会被清理工具删）
+别：下载文件夹         （会被定期清空）
+别：很深的嵌套路径      （路径总长超过 260 字符会出问题）
+</code></pre>
+<h3 id="h-2">③ 我的 QQ 号在哪看</h3>
+<ul>
+<li><strong>电脑 QQ</strong>：点左下角头像 → 昵称下面就是 QQ 号；或「设置」→「账号管理」</li>
+<li><strong>手机 QQ</strong>：左上角头像 → 点自己的名字 → 看「QQ 号」</li>
+</ul>
+<p>填写的格式就是纯数字，例如 <code>123456789</code>。</p>
+<h3 id="h-2">④ "机器人号"是什么，怎么来</h3>
+<p>指<strong>专门用来跑程序的那个 QQ 号</strong>。</p>
+<ul>
+<li>可以是你自己的小号</li>
+<li>也可以新注册一个（手机 QQ 登录页 →「新用户注册」）</li>
+<li><strong>不建议用主号</strong>，原因见第 12 章</li>
+</ul>
+<p>注册好之后，在手机 QQ 里登录一次（过一下验证），再在电脑 QQ 里登录，方便扫码。</p>
+<h3 id="h-2">⑤ 提示"Windows 已保护你的电脑"</h3>
+<p>这是 SmartScreen 对没有数字签名的程序的标准提示，不是病毒：</p>
+<pre><code>
+点「更多信息」→ 点「仍要运行」
+</code></pre>
+<h3 id="h-2">⑥ 杀毒软件报毒 / 把文件删了</h3>
+<p>内置的运行环境（<code>runtime\node.exe</code>）和脚本可能被杀软误判。处理：</p>
+<ol>
+<li>打开杀软 →「信任区 / 白名单 / 排除项」</li>
+<li>把整个安装文件夹加进去</li>
+<li>如果文件已经被隔离，先从隔离区恢复，再加白名单</li>
+</ol>
+<p>Windows 自带的 Defender：设置 → 隐私和安全性 → Windows 安全中心 → 病毒和威胁防护 →「管理设置」→ 添加排除项。</p>
+<h3 id="h-2">⑦ 我是不是 64 位系统</h3>
+<p>右键「此电脑」→ 属性 → 看「系统类型」：</p>
+<pre><code>
+64 位操作系统  →  可以用
+32 位操作系统  →  不支持（程序里的运行时是 64 位的）
+</code></pre>
+<hr>
+<h2 id="h-2">1. 这是什么</h2>
+<p>一个装在你电脑上的 AI 角色对话程序。它会记住你说过的事，有自己的说话方式，通过 QQ 和你聊天。</p>
+<p><strong>它能做的：</strong></p>
+<ul>
+<li>记住聊天内容（长期记忆 + 每天/每周总结）</li>
+<li>有固定的性格和说话习惯，不是客服腔</li>
+<li>会主动找你（可选，默认开）</li>
+<li>管理后台里可以改人设、回复节奏、记忆规则、模型</li>
+<li>所有聊天记录存在你自己电脑上</li>
+</ul>
+<p><strong>它不做的：</strong></p>
+<ul>
+<li>不提供 QQ 账号，也不代登录</li>
+<li>不包含 QQ 中间件（NapCat / SnowLuma 那类工具），需要你自己装</li>
+<li>不承诺账号安全（第三方接入有平台风险，见第 12 章）</li>
+<li>不带模型额度，API 费用自理</li>
+</ul>
+<hr>
+<h2 id="h-3">2. 系统要求</h2>
+<table><thead><tr><th>项目</th><th>要求</th><th>说明</th></tr></thead><tbody>
+<tr><td>系统</td><td>Windows 10 1809+ 或 Windows 11，64 位</td><td>不支持 Win7/8、macOS、Linux</td></tr>
+<tr><td>内存</td><td>4 GB 以上</td><td>8 GB 更稳</td></tr>
+<tr><td>磁盘</td><td>至少 1 GB 空闲</td><td>程序本身约 120 MB，聊天数据会慢慢长大</td></tr>
+<tr><td>网络</td><td>能访问模型 API</td><td>国内可直连 DeepSeek</td></tr>
+<tr><td>权限</td><td>普通用户权限即可</td><td>不写系统目录、不装驱动、不改注册表</td></tr>
+<tr><td>运行环境</td><td><strong>无需安装</strong></td><td>Node.js 已内置在包里</td></tr>
+</tbody></table>
+<blockquote>安装位置建议：<code>D:\林知夏</code> 这类固定目录。<strong>不要放在桌面、下载文件夹、临时目录</strong>——会被清理或误删。</blockquote>
+<hr>
+<h2 id="h-4">3. 安装前准备</h2>
+<h3 id="h-5">3.1 申请模型 API Key（必做）</h3>
+<ol>
+<li>打开 <code>platform.deepseek.com</code>，注册并登录</li>
+<li>充值（首次 10 元够聊很久）</li>
+<li>左侧「API Keys」→「创建 API Key」</li>
+<li>复制以 <code>sk-</code> 开头的字符串，<strong>只显示一次，先存到记事本</strong></li>
+</ol>
+<p>费用参考见第 11 章。</p>
+<blockquote>用别的模型服务也行：后台「模型」页可以改 Base URL 和模型名。但本说明以 DeepSeek 为例。</blockquote>
+<h3 id="h-5">3.2 决定要不要接 QQ</h3>
+<p>两种用法，任选：</p>
+<table><thead><tr><th>用法</th><th>需要什么</th><th>适合谁</th></tr></thead><tbody>
+<tr><td><strong>A. 浏览器里聊</strong></td><td>只要安装包 + API Key</td><td>想先试试、不想折腾</td></tr>
+<tr><td><strong>B. 在 QQ 里聊</strong></td><td>额外装一个中间件（NapCat 或 SnowLuma）+ 一个机器人 QQ 号</td><td>想随时在手机上聊</td></tr>
+</tbody></table>
+<p><strong>先装 A 也能用</strong>，之后随时补 B。</p>
+<h3 id="h-5">3.3 准备中间件（只有选 B 才需要）</h3>
+<table><thead><tr><th>中间件</th><th>适配的 QQ 版本</th><th>获取方式</th></tr></thead><tbody>
+<tr><td>NapCat 4.18.x</td><td>QQ 9.9.20 ~ 9.9.29</td><td>GitHub <code>NapNeko/NapCatQQ</code> 的 Releases</td></tr>
+<tr><td>SnowLuma 2.2.x</td><td>QQ 9.9.30 以上（含 9.9.36）</td><td>GitHub <code>SnowLuma/SnowLuma</code> 的 Releases</td></tr>
+</tbody></table>
+<div class="callout callout-danger"><div class="callout-title">这部分有风险，你要自己判断</div><div class="callout-body">这两个都是第三方非官方实现，<strong>可能违反平台用户协议</strong>，可能导致账号被限制。<br>本安装包不附带、不代装。账号风险由你自行承担，程序不承诺任何账号安全。</div></div>
+<p><strong>装机顺序很重要</strong>：先确认 QQ 版本 → 再选匹配的中间件 → 最后装本程序。</p>
+<hr>
+<h2 id="h-5">4. 安装</h2>
+<h3 id="h-6">4.1 开始</h3>
+<ol>
+<li>把整个文件夹解压到固定位置（如 <code>D:\林知夏</code>）</li>
+<li>双击 <strong><code>一键安装.cmd</code></strong></li>
+<li>出现安装向导窗口（五步）</li>
+</ol>
+<blockquote>如果 Windows 弹「未知发布者」，点「更多信息」→「仍要运行」。原因：程序没有买代码签名证书，不是病毒。</blockquote>
+<h3 id="h-6">4.2 第 1 步：欢迎 / 环境自检</h3>
+<p>向导会自动检查并显示：</p>
+<pre><code>
+· QQ：已安装，版本 9.9.23.42430（D:\qq）
+· QQ 连接中间件：未检测到 OneBot 服务（可选，不装也能用浏览器聊）
+· 连接诊断：发现工具目录，但 3001 没监听 —— 多半是注入失败或没登录
+· 内置运行环境：已打包，无需另外安装 Node.js
+· 管理后台端口：3870
+</code></pre>
+<p>怎么读这段：</p>
+<table><thead><tr><th>显示</th><th>含义</th><th>要不要处理</th></tr></thead><tbody>
+<tr><td>QQ 已安装 + 版本</td><td>检测到 QQ 了</td><td>记下版本，第 6 章要用</td></tr>
+<tr><td>未检测到 OneBot 服务</td><td>中间件没跑</td><td>只想浏览器聊就无视；要接 QQ 就看 6.3/6.4</td></tr>
+<tr><td>连接诊断「没监听」+ 有工具目录</td><td>工具装了但没起来</td><td>看工具窗口报错，多半版本不匹配</td></tr>
+<tr><td>管理后台端口 3870</td><td>后台地址是 <code>http://127.0.0.1:3870</code></td><td>被占用会自动换 3871~3885</td></tr>
+</tbody></table>
+<h3 id="h-6">4.3 第 2 步：填 API Key</h3>
+<p>粘贴第 3.1 拿到的 <code>sk-...</code>。</p>
+<ul>
+<li>可以先跳过，装完在后台「模型」页填</li>
+<li>填错也能改，不影响安装</li>
+</ul>
+<h3 id="h-6">4.4 第 3 步：QQ 连接（可跳过）</h3>
+<p>三个输入框：</p>
+<table><thead><tr><th>字段</th><th>填什么</th><th>默认</th></tr></thead><tbody>
+<tr><td>OneBot 地址</td><td>中间件提供的 WebSocket 地址</td><td><code>ws://127.0.0.1:3001</code></td></tr>
+<tr><td>Token</td><td>中间件里设的 token，没设就留空</td><td>空</td></tr>
+<tr><td>谁可以和她聊天</td><td>你的 QQ 号，多个用英文逗号；<strong>第一个当"主人"</strong></td><td>空</td></tr>
+</tbody></table>
+<p>填完点 <strong>「测试连接」</strong>：</p>
+<pre><code>
+连接成功：昵称（QQ号）     → 可以下一步
+连不上：没有程序在监听这个端口 → 中间件没启动
+连接被拒（401）           → token 不一致
+</code></pre>
+<p>连不上就点 <strong>「一键修复」</strong>（见 6.6），或者先跳过——浏览器聊天不受影响。</p>
+<h3 id="h-6">4.5 第 4 步：安装</h3>
+<p>自动做四件事，进度会打印出来：</p>
+<ol>
+<li>写配置（<code>app\.env</code>）</li>
+<li>建桌面快捷方式（4 个）</li>
+<li>启动服务</li>
+<li>检查 QQ 连接</li>
+</ol>
+<h3 id="h-6">4.6 第 5 步：完成</h3>
+<ul>
+<li>成功：会打开管理后台页面</li>
+<li>未连上 QQ：会列出三条检查项，不影响基础使用</li>
+</ul>
+<p><strong>装完请务必做一件事：关掉 QQ 自动更新</strong>（见 6.5）。</p>
+<hr>
+<h2 id="h-6">5. 首次启动与验证</h2>
+<h3 id="h-7">5.1 桌面四个图标</h3>
+<table><thead><tr><th>图标</th><th>作用</th></tr></thead><tbody>
+<tr><td>启动林知夏</td><td>启动程序（装完已经自动启动过）</td></tr>
+<tr><td>林知夏 管理后台</td><td>打开后台：人设、参数、记忆、用量</td></tr>
+<tr><td><strong>林知夏 自检</strong></td><td><strong>四项状态一眼看清（程序 / QQ / 白名单 / Key），装完先看这个</strong></td></tr>
+<tr><td>林知夏 测试连接</td><td>只检查 QQ 连接细节</td></tr>
+<tr><td>停止林知夏</td><td>关闭程序</td></tr>
+</tbody></table>
+<h3 id="h-7">5.2 先看自检（最重要）</h3>
+<p>双击桌面「林知夏 自检」，会出现一个窗口，四行状态：</p>
+<pre><code>
+① 程序在运行      运行中（端口 3870）
+② QQ 已连接       已连接 / 机器人号
+③ 白名单          1 个号 / 你的 QQ
+④ 模型 Key        已填（sk-…）
+</code></pre>
+<p><strong>全绿 = 能用了</strong>。哪行红了，下面那行小字就写着怎么修，窗口底部还有对应按钮：</p>
+<pre><code>
+重新检查 · 启动程序 · 修复 QQ 连接 · 打开管理后台 · 打开聊天
+</code></pre>
+<p>最常见的一种红：④ 模型 Key 没填（安装时跳过了）→ 点「打开管理后台」→ 模型 → 填 Key → 回来点「重新检查」。</p>
+<h3 id="h-7">5.3 验证三件事</h3>
+<p><strong>① 后台能不能打开</strong></p>
+<p>浏览器访问 <code>http://127.0.0.1:3870</code>（端口以安装时显示为准）。能看到登录页说明服务正常。</p>
+<p><strong>② 浏览器里能不能聊</strong></p>
+<p>双击「打开聊天」，随便发一句，几秒内有回复就通了（说明 API Key 正确、网络正常）。</p>
+<p><strong>③ QQ 里能不能收到回复</strong></p>
+<p>双击「测试连接」：</p>
+<pre><code>
+连接成功：XXX（123456789）   → QQ 已就绪
+</code></pre>
+<p>然后在 QQ 里给机器人号发消息。5~10 秒没回，看第 9 章。</p>
+<hr>
+<h2 id="h-7">6. 接入 QQ（重点）</h2>
+<h3 id="h-8">6.1 原理一句话</h3>
+<pre><code>
+你的 QQ ←→ 中间件（NapCat / SnowLuma）←→ 本程序（通过 ws://127.0.0.1:3001）
+</code></pre>
+<p>中间件负责登录 QQ、收发消息；本程序负责生成回复。中间件不在，本程序就连不上。</p>
+<h3 id="h-8">6.2 版本对照表</h3>
+<table><thead><tr><th>QQ 版本</th><th>推荐中间件</th><th>实测结果</th></tr></thead><tbody>
+<tr><td>9.9.20 ~ 9.9.29</td><td>NapCat 4.18.x</td><td>✅ 可用</td></tr>
+<tr><td>9.9.30 ~ 9.9.39</td><td><strong>NapCat 4.18.x</strong></td><td>❌ 注入失败，QQ 起来就退</td></tr>
+<tr><td>9.9.30 ~ 9.9.39</td><td><strong>SnowLuma 2.2.x</strong></td><td>✅ 可用</td></tr>
+<tr><td>9.9.40 及以上</td><td>未知</td><td>需要试，先看工具是否更新</td></tr>
+</tbody></table>
+<p>查自己的 QQ 版本：QQ 左下角菜单 →「关于」；或看 <code>C:\Program Files\Tencent\QQNT\QQ.exe</code> 的属性。</p>
+<h3 id="h-8">6.3 用 NapCat（适配 QQ 9.9.2x）</h3>
+<p><strong>① 装工具的两种方式</strong></p>
+<ul>
+<li>双击目录里的 <strong><code>修复兼容性.cmd</code></strong>，它会检测版本、推荐工具、在你的同意下下载并解压</li>
+<li>或手动到 <code>github.com/NapNeko/NapCatQQ/releases</code> 下载 <code>NapCat.Shell.zip</code>，解压到 <code>C:\napcat</code></li>
+</ul>
+<p><strong>② 生成 OneBot 配置</strong></p>
+<p><code>修复兼容性.cmd</code> 会自动生成 <code>config\onebot11_&lt;机器人QQ&gt;.json</code>，里面已经写好：</p>
+<pre><code>
+端口 3001 / host 127.0.0.1 / token 空 / messagePostFormat array
+</code></pre>
+<p>手动装的话，把端口改成 3001 即可（其它保持默认）。</p>
+<p><strong>③ 启动</strong></p>
+<pre><code>
+1. 确认 QQ 已登录（NapCat 复用现有登录态）
+2. 运行 NapCatWinBootMain.exe "D:\qq\QQ.exe" "C:\napcat\NapCatWinBootHook.dll" -q 机器人QQ
+3. 等它打印 WebSocket 服务已启动
+</code></pre>
+<p><strong>④ 回本程序</strong></p>
+<p>双击「林知夏 测试连接」→ 看到「连接成功」。</p>
+<div class="callout callout-tip"><div class="callout-title">「修复兼容性」会自动做完 ①~③</div><div class="callout-body">检测版本 → 下载对应工具 → 解压到 C:\napcat → 生成 OneBot 配置（端口 3001）<br>→ 问你一句要不要现在启动 → 启动后 QQ 会重启一次，扫码登录即可。<br>你只需要：扫码 + 回向导点「测试连接」。</div></div>
+<h3 id="h-8">6.4 用 SnowLuma（适配 QQ 9.9.3x）</h3>
+<p><strong>① 装</strong></p>
+<ul>
+<li>双击 <code>修复兼容性.cmd</code>，它会推荐 SnowLuma 并下载</li>
+<li>或手动到 <code>github.com/SnowLuma/SnowLuma/releases</code> 下载 <code>lite</code> 版，解压到 <code>C:\snowluma</code></li>
+</ul>
+<p><strong>② 启动</strong></p>
+<pre><code>
+1. 先启动并登录 QQ
+2. 运行 C:\snowluma\launcher.bat
+3. 浏览器打开 http://127.0.0.1:5099
+</code></pre>
+<p><strong>③ 在 WebUI 里接入</strong></p>
+<ul>
+<li>扫码或复用现有登录</li>
+<li>找「OneBot / WebSocket」相关设置，把监听端口设为 <strong>3001</strong></li>
+<li>保存并启用</li>
+</ul>
+<p><strong>④ 回本程序</strong></p>
+<p>双击「林知夏 测试连接」。</p>
+<div class="callout callout-note"><div class="callout-title">SnowLuma 的配置在网页里，脚本帮不了</div><div class="callout-body">「修复兼容性」会帮你下载、解压、启动，并打开 http://127.0.0.1:5099。<br>但初始密码只在 SnowLuma 窗口里显示，接入 QQ 和新建 OneBot 连接必须在网页里操作：<br>登录 → 接入 QQ（扫码）→ 新建 WebSocket 服务，端口填 3001 → 保存启用。</div></div>
+<h3 id="h-8">6.5 关掉 QQ 自动更新（必做）</h3>
+<p>中间件是按 QQ 版本适配的，QQ 一自动升级，原本能用的中间件可能立刻失效。</p>
+<div class="callout callout-important"><div class="callout-title">这是最容易被忽略、又最容易出事的一步</div><div class="callout-body"><strong>不关自动更新，某天早上你会发现 QQ 连不上了</strong>——不是程序坏了，是 QQ 自己升级了。</div></div>
+<p>QQ 里操作：</p>
+<pre><code>
+左下角菜单 → 设置 → 关于 / 更新 → 选「不自动更新」
+</code></pre>
+<p>部分版本在「设置 → 通用 → 自动更新」里，看到类似开关就关掉。</p>
+<p>关掉之后想升级，只能手动去官网下载——这也正是我们想要的：<strong>你决定什么时候升级，而不是半夜被升级搞挂</strong>。</p>
+<h3 id="h-8">6.6 版本不匹配怎么办</h3>
+<p><strong>三种情况，三种处理：</strong></p>
+<table><thead><tr><th>情况</th><th>现象</th><th>处理</th></tr></thead><tbody>
+<tr><td>QQ 太新，工具太旧</td><td>工具窗口报注入失败，3001 不监听</td><td>换匹配的工具（<code>修复兼容性.cmd</code> 会推荐）</td></tr>
+<tr><td>QQ 太旧，工具太新</td><td>同上</td><td>换旧版工具，或升级 QQ（有数据风险，见下）</td></tr>
+<tr><td>都对，但没登录</td><td>工具起来了但没连上 QQ</td><td>在工具里扫码登录</td></tr>
+</tbody></table>
+<p><strong>为什么本程序不帮你降级 QQ：</strong></p>
+<ul>
+<li>腾讯不提供旧版本的官方下载入口</li>
+<li>QQ NT 的本地数据库会随版本升级，<strong>升级后不保证能降级读回</strong></li>
+<li>降级属于高风险操作，必须由你本人决定</li>
+</ul>
+<div class="callout callout-danger"><div class="callout-title">改 QQ 版本前，先备份这个目录</div><div class="callout-body">不备份就降级，<strong>可能读不回本地聊天记录</strong>（NT 版数据库升级不可逆）。<br>我们程序自己的记忆库不受影响，但你的 QQ 聊天记录会。</div></div>
+<pre><code>
+把整个目录复制到别处（U 盘或其它盘）：
+C:\Users\你的用户名\Documents\Tencent Files
+</code></pre>
+<p>并且知道：换版本或换安装路径后，可能需要重新扫码登录。</p>
+<h3 id="h-8">6.7 白名单机制</h3>
+<p>只有 <code>.env</code> 里 <code>ALLOWED_QQS</code> 列出的 QQ 号，她才会回复。别人的消息直接忽略。</p>
+<ul>
+<li>第一个号是"主人"，会收到主动消息</li>
+<li>加人：后台「访问权限」页，或直接改 <code>app\.env</code> 后重启</li>
+</ul>
+<div class="callout callout-note"><div class="callout-title">白名单是"允许名单"，不是"拉黑"</div><div class="callout-body">清空白名单 = <strong>谁都不回</strong>。想让谁都能聊，得把他加进去，而不是留空。</div></div>
+<hr>
+<h2 id="h-8">7. 日常使用</h2>
+<h3 id="h-9">7.1 聊天</h3>
+<p>在 QQ 里正常发消息即可。她会：</p>
+<ul>
+<li>分条回复（像真人打字）</li>
+<li>偶尔发表情包</li>
+<li>记住你说过的事，之后提起</li>
+</ul>
+<h3 id="h-9">7.2 管理后台</h3>
+<p>地址：<code>http://127.0.0.1:3870</code>（token 在 <code>app\data\web-token</code>）</p>
+<p>主要页面：</p>
+<table><thead><tr><th>页面</th><th>你能改什么</th></tr></thead><tbody>
+<tr><td>概览</td><td>看今天聊了多少、用了多少钱</td></tr>
+<tr><td>人设</td><td>名字、性格、说话风格、口头禅</td></tr>
+<tr><td>模型</td><td>API Key、Base URL、模型名、温度</td></tr>
+<tr><td>记忆</td><td>记多少轮、什么时候总结</td></tr>
+<tr><td>节奏</td><td>打字速度、分条间隔、是否连发</td></tr>
+<tr><td>主动消息</td><td>开关、空闲多久找你、每天最多几条</td></tr>
+<tr><td>语音</td><td>开关、音色（需另配语音服务）</td></tr>
+<tr><td>安全</td><td>内容边界、频率限制、黑名单</td></tr>
+</tbody></table>
+<p>改完即时生效，不用重启（个别项除外）。</p>
+<h3 id="h-9">7.3 主动消息</h3>
+<p>默认开：空闲 90 分钟以上，她会主动发一条，每天最多 3 条。</p>
+<p>觉得烦：后台「主动消息」关掉，或把 <code>app\.env</code> 里 <code>PROACTIVE</code> 改成 0。</p>
+<h3 id="h-9">7.4 换一个人设</h3>
+<p>后台「人设」页可以直接改；也可以放新的 <code>personas\xxx.json</code>，然后在 <code>.env</code> 里把 <code>PERSONA</code> 改成 <code>xxx</code>。</p>
+<hr>
+<h2 id="h-9">8. 数据与备份</h2>
+<h3 id="h-10">8.1 数据在哪</h3>
+<pre><code>
+D:\林知夏\app\data\
+  bot.db         聊天记录 + 长期记忆（最重要）
+  bot.db-wal     数据库日志（运行时存在）
+  web-token      后台访问令牌
+  sandbox.db     浏览器测试台的独立记录
+</code></pre>
+<h3 id="h-10">8.2 怎么备份</h3>
+<p><strong>手动备份（推荐每月一次）</strong></p>
+<ol>
+<li>双击「停止林知夏」</li>
+<li>把整个 <code>app\data</code> 文件夹复制到别处</li>
+<li>双击「启动林知夏」</li>
+</ol>
+<div class="callout callout-important"><div class="callout-title">必须先停止程序</div><div class="callout-body">运行中直接复制，可能拿到写到一半的数据库（还有 -wal 文件没合并）。<br>正确顺序：停止 → 复制 → 启动。</div></div>
+<h3 id="h-10">8.3 怎么恢复</h3>
+<ol>
+<li>停止程序</li>
+<li>把备份的 <code>data</code> 文件夹覆盖回 <code>app\data</code></li>
+<li>启动</li>
+</ol>
+<h3 id="h-10">8.4 换电脑迁移</h3>
+<ol>
+<li>旧电脑：停止程序 → 复制整个安装文件夹（含 <code>data</code>）</li>
+<li>新电脑：放到同版本目录 → 双击 <code>一键安装.cmd</code> 走一遍</li>
+<li>安装向导会读已有 <code>.env</code>，Key 和白名单不用重填</li>
+</ol>
+<blockquote>注意：换电脑后 QQ 中间件要重新装（跟本程序无关）。</blockquote>
+<h3 id="h-10">8.5 聊天记录会不会被上传</h3>
+<p>不会。记录只存在 <code>bot.db</code>。只有生成回复时，最近几轮对话会作为上下文发给模型 API——这是所有大模型应用的必需流程。</p>
+<hr>
+<h2 id="h-10">9. 故障排查</h2>
+<h3 id="h-11">9.1 QQ 不回复</h3>
+<p>按顺序查：</p>
+<table><thead><tr><th>检查项</th><th>怎么查</th><th>正常表现</th></tr></thead><tbody>
+<tr><td>程序在跑吗</td><td>桌面「林知夏 管理后台」能不能打开</td><td>能打开</td></tr>
+<tr><td>中间件在跑吗</td><td>浏览器开 <code>http://127.0.0.1:3001</code> 或看工具窗口</td><td>工具显示已连接</td></tr>
+<tr><td>端口通吗</td><td>双击「测试连接」</td><td>显示「连接成功」</td></tr>
+<tr><td>白名单对吗</td><td>后台「访问权限」</td><td>你的号在列表里</td></tr>
+<tr><td>模型有额度吗</td><td>后台「概览」看最近调用</td><td>有成功记录</td></tr>
+</tbody></table>
+<h3 id="h-11">9.2 常见报错对照</h3>
+<table><thead><tr><th>报错</th><th>原因</th><th>处理</th></tr></thead><tbody>
+<tr><td><code>ECONNREFUSED 127.0.0.1:3001</code></td><td>中间件没启动/端口不对</td><td>启动中间件；核对 <code>.env</code> 的 <code>ONEBOT_WS_URL</code></td></tr>
+<tr><td><code>401</code> / <code>连接被拒</code></td><td>token 不一致</td><td>中间件和 <code>.env</code> 里填一样的 token</td></tr>
+<tr><td><code>连接成功</code> 但 QQ 不回</td><td>白名单没你的号</td><td>后台「访问权限」加上</td></tr>
+<tr><td>回复很慢（&gt;20 秒）</td><td>模型服务慢 / 网络差</td><td>切模型或换网络</td></tr>
+<tr><td><code>insufficient balance</code></td><td>API 余额不足</td><td>去模型平台充值</td></tr>
+<tr><td><code>invalid api key</code></td><td>Key 填错或过期</td><td>后台「模型」页重填</td></tr>
+<tr><td>后台打不开</td><td>程序没启动 / 端口被占</td><td>停止再启动；改 <code>.env</code> 的 WEB_PORT</td></tr>
+<tr><td>中文乱码</td><td>用记事本另存过 <code>.env</code></td><td>用后台改，别手动存</td></tr>
+</tbody></table>
+<h3 id="h-11">9.3 中间件相关</h3>
+<table><thead><tr><th>现象</th><th>原因</th><th>处理</th></tr></thead><tbody>
+<tr><td>NapCat 窗口闪退</td><td>QQ 版本不匹配</td><td>换 SnowLuma 或降 QQ（6.6）</td></tr>
+<tr><td>工具说"注入失败"</td><td>QQ 版本高于工具支持</td><td>同上</td></tr>
+<tr><td>工具起来了，QQ 没登录</td><td>需要扫码</td><td>在工具里扫码</td></tr>
+<tr><td>QQ 更新后突然全挂</td><td>自动更新没关</td><td>关更新（6.5），换匹配版本</td></tr>
+</tbody></table>
+<h3 id="h-11">9.4 程序本身</h3>
+<table><thead><tr><th>现象</th><th>处理</th></tr></thead><tbody>
+<tr><td>双击没反应</td><td>看 <code>app\logs\app.err.log</code> 最后几行</td></tr>
+<tr><td>启动后马上退出</td><td>检查 <code>app\.env</code> 是否被改坏（可删掉重跑安装）</td></tr>
+<tr><td>端口冲突</td><td>安装会自动换端口；手动改 <code>WEB_PORT</code></td></tr>
+<tr><td>磁盘满</td><td>数据在 <code>app\data</code>，清理或迁移</td></tr>
+</tbody></table>
+<hr>
+<h2 id="h-11">10. 诊断与求助</h2>
+<h3 id="h-12">10.1 跑诊断</h3>
+<p>双击目录里的 <strong><code>诊断.cmd</code></strong>，会打印：</p>
+<pre><code>
+=== 程序 ===      运行环境、配置、后台端口
+=== QQ ===        版本、路径、兼容性提示
+=== 中间件 ===    目录、进程、端口、判断
+=== 配置 ===      地址、token、白名单（token 只显示长度）
+=== 最近日志 ===  最后 10 行
+=== 结论 ===      最可能的原因 + 下一步
+</code></pre>
+<h3 id="h-12">10.2 发给卖家什么</h3>
+<p>把诊断窗口<strong>整段复制</strong>发过去。<strong>不要发</strong> API Key、token 明文——诊断输出里已经帮你隐藏了 token。</p>
+<h3 id="h-12">10.3 自己先看日志</h3>
+<pre><code>
+app\logs\app.out.log   正常输出
+app\logs\app.err.log   错误输出
+</code></pre>
+<hr>
+<h2 id="h-12">11. 费用与额度</h2>
+<table><thead><tr><th>项目</th><th>费用</th><th>说明</th></tr></thead><tbody>
+<tr><td>本程序</td><td>一次性</td><td>已付</td></tr>
+<tr><td>模型 API</td><td>按量</td><td>一轮约 0.005 元（DeepSeek）</td></tr>
+<tr><td>中间件</td><td>免费</td><td>工具本身不收钱</td></tr>
+<tr><td>服务器</td><td>0</td><td>本地版跑在你电脑上</td></tr>
+<tr><td>语音（可选）</td><td>按量</td><td>另配语音服务，默认关闭</td></tr>
+</tbody></table>
+<p><strong>估算：</strong></p>
+<pre><code>
+每天聊 50 轮  ≈ 0.25 元/天  ≈ 7.5 元/月
+每天聊 100 轮 ≈ 0.50 元/天  ≈ 15 元/月
+每天聊 300 轮 ≈ 1.50 元/天  ≈ 45 元/月
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">想省钱</div><div class="callout-body">后台把 <code>MAX_TOKENS</code> 调小、<code>HISTORY_TURNS</code> 调小、关掉语音。<br>记忆轮数从 8 降到 4，成本大约减半，但"记得住"会差一些。</div></div>
+<hr>
+<h2 id="h-13">12. 安全与合规</h2>
+<h3 id="h-14">12.1 账号风险（必读）</h3>
+<div class="callout callout-danger"><div class="callout-title">不要用主号</div><div class="callout-body">- 中间件是第三方非官方实现，<strong>可能违反平台用户协议</strong><br>- 可能导致账号被限制、封禁<br>- 建议<strong>专门注册一个机器人号</strong>来跑<br>- 本程序不承诺任何账号安全，风险由你自行判断</div></div>
+<h3 id="h-14">12.2 内容边界</h3>
+<p>程序内置基本的内容边界。你不能用它：</p>
+<ul>
+<li>生成违法内容</li>
+<li>冒充他人、侵犯肖像权</li>
+<li>骚扰他人</li>
+</ul>
+<h3 id="h-14">12.3 隐私</h3>
+<ul>
+<li>聊天记录只在你电脑上</li>
+<li>生成回复时，最近几轮会发给模型 API（必需）</li>
+<li>不要把 API Key 发给别人</li>
+</ul>
+<hr>
+<h2 id="h-14">13. 卸载与重装</h2>
+<h3 id="h-15">13.1 卸载（双击「卸载.cmd」）</h3>
+<pre><code>
+1. 双击目录里的「卸载.cmd」
+2. 弹窗告诉你要删什么（程序大小、快捷方式数量、安装目录）
+3. 勾选「保留聊天记录」（默认勾着）→ 点「卸载」
+4. 几秒后提示「卸载完成」
+</code></pre>
+<p><strong>勾选保留会怎样</strong>：把 <code>app\data</code> 复制到桌面（命名 <code>林知夏-聊天记录-年月日-时分</code>），再删掉程序目录。重装后把这些文件放回 <code>app\data</code> 就能恢复。</p>
+<p><strong>不勾选</strong>：连记录一起删，<strong>删了找不回来</strong>。</p>
+<h3 id="h-15">13.2 会删什么、不会删什么</h3>
+<table><thead><tr><th>会删</th><th>不会删</th></tr></thead><tbody>
+<tr><td>程序文件（约 116 MB）</td><td>你的 QQ 和 QQ 的聊天记录</td></tr>
+<tr><td>桌面 5 个快捷方式</td><td>系统设置、注册表项</td></tr>
+<tr><td><code>app\data</code>（不勾保留时）</td><td>其它任何文件</td></tr>
+</tbody></table>
+<div class="callout callout-note"><div class="callout-title">有文件被占用删不掉</div><div class="callout-body">极少数情况（杀软正在扫描）会删不完全，弹窗会提示重启后手动删除。<br>重启后把剩下的文件夹删掉即可，不影响系统。</div></div>
+<h3 id="h-15">13.3 手动卸载（卸载.cmd 丢了时）</h3>
+<pre><code>
+1. 双击「停止林知夏」（或任务管理器结束 node.exe）
+2. 删掉桌面 5 个快捷方式
+3. 删掉整个安装文件夹
+</code></pre>
+<h3 id="h-15">13.4 升级到新版本</h3>
+<p>卖家发给你一个「升级包」（约 1~3 MB，比整个安装包小很多）。</p>
+<pre><code>
+1. 解压升级包（会得到一个文件夹，里面有 升级.cmd）
+2. 把解压出来的东西，复制到「林知夏」安装目录里（覆盖）
+3. 双击目录里的「升级.cmd」
+4. 它会：停程序 → 备份旧版 → 替换代码 → 启动验证
+5. 看到「升级完成，程序已启动」就好了
+</code></pre>
+<div class="callout callout-important"><div class="callout-title">升级不会动你的数据</div><div class="callout-body">只替换程序代码。<code>app\data</code>（聊天记录）、<code>app\.env</code>（你的配置）、依赖都不会动。</div></div>
+<div class="callout callout-note"><div class="callout-title">升级失败会自动回滚</div><div class="callout-body">如果新版起不来，它会自动恢复成升级前的版本，并在 <code>backup\</code> 里留一份备份。<br>这时候把窗口内容截图发给卖家即可。</div></div>
+<h3 id="h-15">13.5 重装</h3>
+<ol>
+<li>保留 <code>app\data</code>（如果要留记录）</li>
+<li>删除其它文件</li>
+<li>重新解压安装包，把 <code>data</code> 放回 <code>app\data</code></li>
+<li>双击 <code>一键安装.cmd</code></li>
+</ol>
+<hr>
+<h2 id="h-15">14. 附录</h2>
+<h3 id="h-16">14.1 端口一览</h3>
+<table><thead><tr><th>端口</th><th>用途</th><th>谁用</th></tr></thead><tbody>
+<tr><td>3870~3885</td><td>管理后台</td><td>本程序（自动选空闲）</td></tr>
+<tr><td>3001</td><td>OneBot WebSocket</td><td>中间件 → 本程序</td></tr>
+<tr><td>5099</td><td>SnowLuma WebUI</td><td>中间件自带</td></tr>
+</tbody></table>
+<h3 id="h-16">14.2 文件清单</h3>
+<pre><code>
+林知夏-本地版-v1.0\
+  一键安装.cmd        安装入口
+  启动.cmd / 停止.cmd  启停
+  打开后台.cmd         打开管理后台
+  打开聊天.cmd         浏览器聊天
+  测试连接.cmd         检查 QQ 连接
+  诊断.cmd             环境诊断
+  修复兼容性.cmd        版本不匹配时用
+  使用说明.txt          快速上手
+  操作说明.html         本文件（浏览器打开）
+  操作说明.txt          本文件（纯文本）
+  compat.json         版本兼容表
+  *.ps1               内部脚本
+  runtime\node.exe    内置运行环境
+  app\                程序与数据
+    src\ server\ web\ personas\ stickers\
+    node_modules\
+    .env              你的配置
+    data\             你的聊天记录
+    logs\             日志
+</code></pre>
+<h3 id="h-16">14.3 常用环境变量</h3>
+<table><thead><tr><th>变量</th><th>作用</th><th>默认</th></tr></thead><tbody>
+<tr><td><code>DEEPSEEK_API_KEY</code></td><td>模型 Key</td><td>空</td></tr>
+<tr><td><code>DEEPSEEK_MODEL</code></td><td>模型名</td><td><code>deepseek-chat</code></td></tr>
+<tr><td><code>WEB_PORT</code></td><td>后台端口</td><td>3870</td></tr>
+<tr><td><code>ONEBOT_WS_URL</code></td><td>中间件地址</td><td><code>ws://127.0.0.1:3001</code></td></tr>
+<tr><td><code>ONEBOT_TOKEN</code></td><td>中间件 token</td><td>空</td></tr>
+<tr><td><code>ALLOWED_QQS</code></td><td>白名单</td><td>空</td></tr>
+<tr><td><code>OWNER_QQ</code></td><td>主人（收主动消息）</td><td>白名单第一个</td></tr>
+<tr><td><code>PROACTIVE</code></td><td>主动消息</td><td>1</td></tr>
+<tr><td><code>VOICE</code></td><td>语音</td><td>0</td></tr>
+<tr><td><code>HISTORY_TURNS</code></td><td>上下文轮数</td><td>8</td></tr>
+</tbody></table>
+<p>改 <code>.env</code> 后需要重启程序生效。<strong>别用记事本另存</strong>，会改编码。</p>
+<h3 id="h-16">14.4 命令速查</h3>
+<pre><code>
+启动：      双击「启动林知夏」
+停止：      双击「停止林知夏」
+测连接：    双击「林知夏 测试连接」
+诊断：      双击「诊断.cmd」
+修复版本：  双击「修复兼容性.cmd」
+看日志：    打开 app\logs\
+改配置：    后台「模型」页，或 app\.env
+</code></pre>
+<hr>
+<p><strong>最后一条建议</strong>：改任何东西之前，先把 <code>app\data</code> 复制一份。这个文件夹里有她的记忆——比程序本身值钱。</p>
+  </main>
+  <footer>遇到问题：先看第 9 章，再跑「诊断.cmd」，把输出整段发给卖家。</footer>
+</div>
+</body>
+</html>

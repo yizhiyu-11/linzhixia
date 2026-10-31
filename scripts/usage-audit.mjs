@@ -1,0 +1,11 @@
+import { DatabaseSync } from 'node:sqlite';
+const d = new DatabaseSync('data/bot.db', { readOnly: true });
+const cols = d.prepare('PRAGMA table_info(usage)').all().map((c) => c.name);
+console.log('  usage 字段:', cols.join(','));
+const total = d.prepare('SELECT COUNT(*) AS n FROM usage').get();
+console.log('  总行数:', total.n);
+const today = d.prepare('SELECT COUNT(*) AS n, SUM(cost_yuan) AS c, SUM(prompt_tokens) AS p, SUM(completion_tokens) AS k FROM usage WHERE created_at > ?').get(Date.now() - 86400_000);
+console.log('  近 24h:', JSON.stringify(today));
+const last = d.prepare('SELECT * FROM usage ORDER BY id DESC LIMIT 2').all();
+for (const r of last) console.log('   样本:', JSON.stringify(r));
+d.close();

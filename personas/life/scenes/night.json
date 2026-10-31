@@ -1,0 +1,129 @@
+{
+  "band": "night",
+  "hours": [21.5, 24],
+  "scenes": [
+    {
+      "id": "ni_shower",
+      "place": "home",
+      "location": "家",
+      "doing": "刚洗完澡，头发还在滴水",
+      "pace": "quiet",
+      "chat": 0.8,
+      "items": [
+        { "text": "吹风机找不到了", "kind": "chore", "expectMin": 25, "carry": true }
+      ]
+    },
+    {
+      "id": "ni_sofa_phone",
+      "place": "home",
+      "location": "家",
+      "doing": "窝在沙发上刷手机，一条都没记住",
+      "pace": "quiet",
+      "chat": 0.9,
+      "items": [
+        { "text": "衣服泡在盆里还没洗", "kind": "chore", "expectMin": 120, "carry": true },
+        { "text": "刷到一条很傻的视频", "kind": "leisure", "expectMin": 15 }
+      ]
+    },
+    {
+      "id": "ni_pick_clothes",
+      "place": "home",
+      "location": "家",
+      "doing": "在挑明天穿什么，衣柜翻乱了",
+      "pace": "quiet",
+      "chat": 0.8,
+      "items": [
+        { "text": "不知道明天会不会下雨", "kind": "leisure", "expectMin": 20 },
+        { "text": "衣柜翻乱了", "kind": "chore", "expectMin": 20, "carry": true }
+      ]
+    },
+    {
+      "id": "ni_mask",
+      "place": "home",
+      "location": "家",
+      "doing": "在敷面膜，说话不方便",
+      "pace": "quiet",
+      "chat": 0.5,
+      "items": [
+        { "text": "面膜快干了", "kind": "chore", "expectMin": 15 }
+      ]
+    },
+    {
+      "id": "ni_music_earphone",
+      "place": "home",
+      "location": "家",
+      "doing": "在听歌，只有一边耳机响",
+      "pace": "quiet",
+      "chat": 0.7,
+      "items": [
+        { "text": "另一边耳机好像坏了", "kind": "leisure", "expectMin": 10 },
+        { "text": "想起一首老歌", "kind": "leisure", "expectMin": 20 }
+      ]
+    },
+    {
+      "id": "ni_late_work",
+      "place": "home",
+      "location": "家",
+      "doing": "熬夜改东西，眼睛发酸",
+      "pace": "busy",
+      "chat": 0.6,
+      "items": [
+        { "text": "明天要交", "kind": "work", "expectMin": 90 },
+        {
+          "text": "领导又改了要求",
+          "kind": "work",
+          "expectMin": 10,
+          "appraisal": { "relevance": 0.8, "goalCongruence": -0.6, "agency": "other", "selfImage": -0.3 }
+        }
+      ]
+    },
+    {
+      "id": "ni_kitchen_snack",
+      "place": "home",
+      "location": "家",
+      "doing": "在厨房找吃的，只剩泡面",
+      "pace": "quiet",
+      "chat": 0.7,
+      "items": [
+        { "text": "只剩泡面", "kind": "meal", "expectMin": 15 },
+        { "text": "不该这个点吃", "kind": "meal", "expectMin": 5 }
+      ]
+    },
+    {
+      "id": "ni_bed_scroll",
+      "place": "bed",
+      "location": "床上",
+      "doing": "躺着刷手机，越刷越精神",
+      "pace": "quiet",
+      "chat": 0.9,
+      "items": [
+        { "text": "明早闹钟又没设", "kind": "chore", "expectMin": 10 },
+        { "text": "手机快没电了", "kind": "leisure", "expectMin": 10 }
+      ]
+    },
+    {
+      "id": "ni_insomnia",
+      "place": "bed",
+      "location": "床上",
+      "doing": "躺着睡不着，翻来覆去",
+      "pace": "quiet",
+      "chat": 0.8,
+      "items": [
+        { "text": "脑子里全是明天的事", "kind": "leisure", "expectMin": 60 },
+        { "text": "越想越清醒", "kind": "leisure", "expectMin": 30 }
+      ]
+    },
+    {
+      "id": "ni_window_rain",
+      "place": "home",
+      "location": "家",
+      "doing": "站在窗边看外面下雨",
+      "pace": "quiet",
+      "chat": 0.8,
+      "items": [
+        { "text": "雨点打在空调外机上", "kind": "leisure", "expectMin": 20 },
+        { "text": "阳台的衣服没收", "kind": "chore", "expectMin": 15, "carry": true }
+      ]
+    }
+  ]
+}

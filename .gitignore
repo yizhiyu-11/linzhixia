@@ -1,0 +1,40 @@
+﻿# 依赖
+node_modules/
+
+# 运行数据（绝不进版本库）
+data/
+logs/
+backup/
+backup/deploy/
+
+# 密钥与本地配置
+.env
+.env.*
+!.env.example
+config.json
+config.*.json
+
+# 运行产物
+bot.out.log
+bot.err.log
+*.log
+
+# 素材源（体积大，云端用不到）
+stickers-v2/
+stickers2/
+tools/emoji/
+tools/stickers-src/
+
+# 临时文件
+_*
+tmp-*
+*.tmp
+*.bak
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+dist/

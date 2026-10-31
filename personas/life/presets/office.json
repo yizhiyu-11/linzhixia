@@ -1,0 +1,26 @@
+{
+  "id": "office",
+  "name": "上班族",
+  "note": "作息参数。时间带由这些时刻算出来，换职业只换这个文件。",
+  "wake": 7.2,
+  "leave": 8.2,
+  "workStart": 9,
+  "lunch": [12, 13],
+  "workEnd": 18,
+  "home": 18.8,
+  "sleep": 0.3,
+  "commuteMin": 45,
+  "chatCurve": {
+    "morning": 0.5,
+    "forenoon": 0.2,
+    "noon": 0.8,
+    "afternoon": 0.2,
+    "evening": 0.7,
+    "night": 0.9
+  },
+  "weekend": {
+    "wake": 9.5,
+    "sleep": 1.5,
+    "note": "周末起晚、睡晚，白天场景换成社交/宅家"
+  }
+}

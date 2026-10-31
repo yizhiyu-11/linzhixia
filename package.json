@@ -1,0 +1,24 @@
+{
+  "name": "ai-gf",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "私人 AI 伴侣 · QQ(NapCat/OneBot11) + DeepSeek",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.mjs",
+    "dev": "node --env-file=.env --watch src/index.mjs",
+    "test": "node scripts/smoke.mjs",
+    "test:e2e": "node scripts/mock-test.mjs"
+  },
+  "dependencies": {
+    "msedge-tts": "^2.1.0",
+    "sharp": "^0.35.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "emoji-datasource-google": "^16.0.0"
+  }
+}

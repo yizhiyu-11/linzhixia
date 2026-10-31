@@ -1,0 +1,23 @@
+{
+  "band": "forenoon",
+  "hours": [9, 12],
+  "scenes": [
+    { "id": "fo_desk", "place": "work", "location": "公司", "doing": "在改第三版稿子", "pace": "busy", "chat": 0.2,
+      "items": [ { "text": "一版等着发出去", "kind": "work", "expectMin": 120 } ] },
+    { "id": "fo_meeting", "place": "work", "location": "公司", "doing": "在开会，偷偷看手机", "pace": "busy", "chat": 0.2,
+      "items": [ { "text": "领导在讲，听不太进去", "kind": "work", "expectMin": 60 } ] },
+    { "id": "fo_boss_talk", "place": "work", "location": "公司", "doing": "刚被叫去办公室", "pace": "busy", "chat": 0.3,
+      "items": [ { "text": "被说了两句，没具体说怎么改", "kind": "work", "expectMin": 20,
+        "appraisal": { "relevance": 0.9, "goalCongruence": -0.7, "agency": "other", "selfImage": -0.5 } } ] },
+    { "id": "fo_print", "place": "work", "location": "公司", "doing": "在等打印机，卡纸了", "pace": "busy", "chat": 0.3,
+      "items": [ { "text": "纸卡在里面", "kind": "work", "expectMin": 15 } ] },
+    { "id": "fo_water", "place": "work", "location": "公司", "doing": "在接水，顺便站了会儿", "pace": "busy", "chat": 0.3,
+      "items": [ { "text": "杯子有点脏", "kind": "chore", "expectMin": 5 } ] },
+    { "id": "fo_cafe", "place": "outside", "location": "咖啡店", "doing": "占着靠窗的位子改东西", "pace": "normal", "chat": 0.5,
+      "items": [ { "text": "咖啡喝了一半", "kind": "meal", "expectMin": 30 }, { "text": "邻桌在打电话", "kind": "leisure", "expectMin": 20 } ] },
+    { "id": "fo_wait_someone", "place": "outside", "location": "咖啡店", "doing": "在等人，有点不耐烦", "pace": "normal", "chat": 0.6,
+      "items": [ { "text": "人还没来，在刷手机", "kind": "leisure", "expectMin": 25 } ] },
+    { "id": "fo_home_clean", "place": "home", "location": "家", "doing": "在收拾房间", "pace": "normal", "chat": 0.5,
+      "items": [ { "text": "衣服叠了一半", "kind": "chore", "expectMin": 60, "carry": true } ] }
+  ]
+}
