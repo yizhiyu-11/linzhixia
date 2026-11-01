@@ -218,3 +218,18 @@ scripts/          构建、测试、数据工具
 新的记忆类型 | `memory.mjs` 建表 + `recall.mjs` 加检索 |
 换模型 | `.env` 里的 `DEEPSEEK_*`（OpenAI 兼容即可） |
 关掉某一层 | `.env` 里的 `PERCEIVE` / `ACT_LAYER` / `UAFFECT` 等开关 |
+
+---
+
+## 九、数字怎么复算
+
+| 数字 | 从哪来 |
+|---|---|
+每轮 token 与费用 | 
+ode scripts/cost-stats.mjs data/bot.db 7 |
+缓存命中率 | 同上，最后一节 |
+峰谷判定 | 
+ode scripts/test-pricing.mjs，规则在 src/pricing.mjs |
+每轮调用次数 | 	urns 表的 cost 与 usage 表按轮次对齐 |
+
+所有数字都来自本地 SQLite，不依赖任何外部服务。
