@@ -75,7 +75,6 @@ web/            后台前端（React + Vite）
 personas/       人设 + 生活设定（单文件：人设里写 life）
 installer/      Windows 安装向导 / 自检 / 诊断 / 修复 / 升级
 scripts/        构建、测试、数据工具
-docs/技术/      设计文档（场景层、情绪层、记忆、裁决）
 ```
 
 ## 人设怎么加

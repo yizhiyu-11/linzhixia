@@ -3,6 +3,4 @@ contact_links:
   - name: 使用问题 / 装不上
     url: https://github.com/yizhiyu-11/linzhixia/blob/main/installer/操作说明.md
     about: 先看操作说明，安装、自检、诊断、修复都在里面
-  - name: 设计文档
-    url: https://github.com/yizhiyu-11/linzhixia/tree/main/docs/技术
-    about: 场景层、情绪层、记忆层、裁决层的设计思路
+
